@@ -5,7 +5,7 @@ declare module "next-auth" {
   interface Session {
     user: {
       /** The user's role. */
-      role: string;
+      role: "admin" | "general" | "banned";
       /** True when the user is new. */
       isNew: boolean;
     } & DefaultSession["user"];
